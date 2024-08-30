@@ -1,0 +1,99 @@
+{
+  "menu": {
+    "id": "mainMenu",
+    "type": "menu",
+    "name": "Главное меню",
+    "message": "{clientName}",
+    "options": [
+      {
+        "id": 1,
+        "type": "command",
+        "name": "Баланс",
+        "message": "{balance}"
+      },
+      {
+        "id": 2,
+        "type": "command",
+        "name": "Интернет трафик",
+        "message": "{internetTraffic}"
+      },
+      {
+        "id": 3,
+        "type": "menu",
+        "name": "Специальные предложения",
+        "message": "",
+        "options": [
+          {
+            "id": 1,
+            "type": "command",
+            "name": "Безлимитный интернет",
+            "message": "{unlimitedInternet}"
+          },
+          {
+            "id": 2,
+            "type": "command",
+            "name": "Скидка 50%",
+            "message": "{discount50}"
+          }
+        ]
+      }
+    ],
+
+    "day": {
+      "goodNight": "Доброй ночи.",
+      "goodMorning": "Доброе утро.",
+      "goodAfternoon": "Добрый день.",
+      "goodEvening": "Добрый вечер."
+    },
+
+    "commands": {
+      "clientName": {
+        "message": "Добро пожаловать, {clientName}!"
+      },
+      "balance": {
+        "threshold": 100,
+        "conditions": {
+          "lessThan": "У Вас на счету меньше 100 тенге. Рекомендуем пополнить баланс.",
+          "default": "Ваш баланс: {balance}"
+        }
+      },
+      "internetTraffic": {
+        "message": "Ваш интернет трафик: {internetTraffic}"
+      },
+      "unlimitedInternet": {
+        "message": "Успейте подключить до 1 июня и получите безлимитный интернет."
+      },
+      "discount50": {
+        "message": "Получите скидку 50% на Абонентскую плату на 3 месяца."
+      }
+    }
+  },
+
+
+
+
+  "controls": {
+    "mainMenu": {
+      "id": "*",
+      "type": "command",
+      "name": "Возврат в главное меню."
+    },
+    "previousMenu": {
+      "id": "9",
+      "type": "command",
+      "name": "Возврат в предыдущее меню."
+    },
+    "repeatMessage": {
+      "id": "#",
+      "type": "command",
+      "name": "Повтор сообщения."
+    }
+  },
+
+
+  "client": {
+    "name": "Dana",
+    "balance": 100,
+    "internetTraffic": 1335885824
+  }
+}
