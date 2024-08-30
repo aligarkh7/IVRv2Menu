@@ -3,7 +3,7 @@
     "id": "mainMenu",
     "type": "menu",
     "name": "Главное меню",
-    "message": "{clientName}",
+    "message": "{day}\nДобро пожаловать, {clientName}!",
     "options": [
       {
         "id": 1,
@@ -15,7 +15,7 @@
         "id": 2,
         "type": "command",
         "name": "Интернет трафик",
-        "message": "{internetTraffic}"
+        "message": "Ваш интернет трафик: {internetTraffic}"
       },
       {
         "id": 3,
@@ -27,13 +27,13 @@
             "id": 1,
             "type": "command",
             "name": "Безлимитный интернет",
-            "message": "{unlimitedInternet}"
+            "message": "Успейте подключить до 1 июня и получите безлимитный интернет."
           },
           {
             "id": 2,
             "type": "command",
             "name": "Скидка 50%",
-            "message": "{discount50}"
+            "message": "Получите скидку 50% на Абонентскую плату на 3 месяца."
           }
         ]
       }
@@ -46,26 +46,14 @@
       "goodEvening": "Добрый вечер."
     },
 
-    "commands": {
-      "clientName": {
-        "message": "Добро пожаловать, {clientName}!"
-      },
-      "balance": {
-        "threshold": 100,
-        "conditions": {
-          "lessThan": "У Вас на счету меньше 100 тенге. Рекомендуем пополнить баланс.",
-          "default": "Ваш баланс: {balance}"
-        }
-      },
-      "internetTraffic": {
-        "message": "Ваш интернет трафик: {internetTraffic}"
-      },
-      "unlimitedInternet": {
-        "message": "Успейте подключить до 1 июня и получите безлимитный интернет."
-      },
-      "discount50": {
-        "message": "Получите скидку 50% на Абонентскую плату на 3 месяца."
-      }
+    "balance": {
+      "threshold": 100,
+      "lessThan": "У Вас на счету меньше {threshold} тенге. Рекомендуем пополнить баланс.",
+      "moreThan": "У Вас на счету больше {threshold} тенге.",
+      "equals": "У Вас на счету ровно {threshold} тенге.",
+      "lessThanOrEqual": "У Вас на счету меньше или равно {threshold} тенге.",
+      "greaterThanOrEqual": "У Вас на счету больше или равно {threshold} тенге.",
+      "default": "Ваш баланс: {balance}"
     }
   },
 
@@ -93,7 +81,7 @@
 
   "client": {
     "name": "Dana",
-    "balance": 100,
+    "balance": 150,
     "internetTraffic": 1335885824
   }
 }

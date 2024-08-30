@@ -9,7 +9,6 @@ public class Controls {
     private final String REPEATMESSAGE = "repeatMessage";
 
     private final String ID = "id";
-    private final String TYPE = "type";
     private final String NAME = "name";
 
     private String mainMenuID;
@@ -54,4 +53,3 @@ public class Controls {
         return repeatMessageNAME;
     }
 }
-
